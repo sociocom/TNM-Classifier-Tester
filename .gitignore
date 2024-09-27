@@ -1,0 +1,14 @@
+# Ignore all files in data, outputs, and model directories
+data/*
+outputs/*
+model/*
+
+# Except specific files to keep in version control
+!data/.gitkeep
+!data/tnm_report.csv
+!outputs/.gitkeep
+!model/.gitkeep
+
+# Ignore Python cache and virtual environment
+__pycache__
+.venv
