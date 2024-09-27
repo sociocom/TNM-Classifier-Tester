@@ -1,9 +1,14 @@
-# TNM-Classifier
+# TNM-Classifier-Tester
 
-BERT で TNM 分類を行うプログラムです．[NTCIR-17 MedNLP-SC Radiology Report Subtask](https://repository.nii.ac.jp/records/2001285)で取り組んだコードを元にしたプログラムです．
-[rye](https://rye.astral.sh/guide/installation/)で python のパッケージを管理しています．
+BERT を用いてがんの TNM 分類を行うプログラム．
+
+このプログラムは，[NTCIR-17 MedNLP-SC Radiology Report Subtask (MedTxt-RR)](https://repository.nii.ac.jp/records/2001285)（肺がん患者の読影レポートから TNM 分類を予測するタスク）で使用したコードを基にしている．[JMedRoBERTa (manbyo-wordpiece)](https://huggingface.co/alabnii/jmedroberta-base-manbyo-wordpiece)モデルを，MedTxt-RR で提供されたコーパスを使用して再訓練したモデルで実行される．
+
+また，パッケージ管理には [rye](https://rye.astral.sh/guide/installation/) を利用している．
 
 ## データの概要
+
+サンプルデータ`data/tnm_report.csv`： MedTxt-RR で公開されたコーパスのうち抽出した 10 件．
 
 入力 (data/)
 | id | T | N | M | text |
