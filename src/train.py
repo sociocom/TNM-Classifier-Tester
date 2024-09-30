@@ -15,9 +15,6 @@ class MultiLabelBERTTester:
     def load_model(self, model_path):
         self.model = BERTMultiLabelModel(model_name=self.model_name).to(self.device)
         self.model.resize_token_embeddings(len(self.tokenizer))
-        self.model.load_state_dict(
-            torch.load(f"{model_path}/pytorch_model.bin", weights_only=True)
-        )
         self.model.eval()
 
     def inferencing(self, df, batch_size=32, max_length=512):

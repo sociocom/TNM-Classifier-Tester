@@ -50,13 +50,13 @@ SYNOPSIS
 FLAGS
     -p, --pretrained_model=PRETRAINED_MODEL
         Type: str
-        Default: 'model'
+        Default: 'sociocom/TNM-Classifier'
     -i, --input_path=INPUT_PATH
         Type: str
         Default: 'data/tnm_report.csv'
     -o, --option_dic_path=OPTION_DIC_PATH
         Type: str
-        Default: 'data/MANBYO_20190...
+        Default: 'data/MANBYO_20210...
     -s, --seed=SEED
         Type: int
         Default: 2023

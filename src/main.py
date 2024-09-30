@@ -4,13 +4,14 @@ import torch
 from transformers import AutoTokenizer
 import fire
 import datetime
+import requests
 
 # from utils import load_dataset
 from train import MultiLabelBERTTester
 
 
 def main(
-    pretrained_model: str = "model",
+    pretrained_model: str = "sociocom/TNM-Classifier",
     input_path: str = "data/tnm_report.csv",
     option_dic_path: str = "data/MANBYO_202106_dic-utf8.dic",
     seed: int = 2023,
@@ -21,10 +22,8 @@ def main(
     # Read Data
     # df = load_dataset(train_data_dir)
     df = pd.read_csv(input_path)
-    # df["TNM"] = df["T"].astype(str) + df["N"].astype(str) + df["M"].astype(str)
-    # labelTNM2id = {v: i for i, v in enumerate(df["TNM"].unique())}
 
-    # TOKENIZER = AutoTokenizer.from_pretrained(pretrained_model)
+    # tokenizer = AutoTokenizer.from_pretrained(pretrained_model)
     tokenizer = AutoTokenizer.from_pretrained(
         pretrained_model, **{"mecab_kwargs": {"mecab_option": option_dic_path}}
     )
