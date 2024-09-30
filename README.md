@@ -2,7 +2,7 @@
 
 BERT を用いてがんの TNM 分類を行うプログラム．
 
-このプログラムは，[NTCIR-17 MedNLP-SC Radiology Report Subtask (MedTxt-RR)](https://repository.nii.ac.jp/records/2001285)（肺がん患者の読影レポートから TNM 分類を予測するタスク）で使用したコードを基にしている．[JMedRoBERTa (manbyo-wordpiece)](https://huggingface.co/alabnii/jmedroberta-base-manbyo-wordpiece)モデルを，MedTxt-RR で提供されたコーパスを使用して再訓練したモデルで実行される．
+このプログラムは，[NTCIR-17 MedNLP-SC Radiology Report Subtask (MedTxt-RR)](https://repository.nii.ac.jp/records/2001285)（肺がん患者の読影レポートから TNM 分類を予測するタスク）で使用したコードを基にしている．[JMedRoBERTa (manbyo-wordpiece)](https://huggingface.co/alabnii/jmedroberta-base-manbyo-wordpiece)モデルを，MedTxt-RR で提供されたコーパスを使用して[再訓練したモデル](https://huggingface.co/sociocom/TNM-Classifier)で実行される．
 
 また，パッケージ管理には [rye](https://rye.astral.sh/guide/installation/) を利用している．
 
